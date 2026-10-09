@@ -3,9 +3,9 @@
 Both reusable Skills are archived here **and actually released as private ChatGPT plugins**. See the [release ledger, exact published-source snapshots, and activation/verification instructions](PLUGIN_RELEASES_2026-10-09.md).
 
 - [Academic Insight v0.8.0 — open ChatGPT plugin](https://chatgpt.com/plugins/plugins_6abe1edc35d88191863eee29d3ae6b0f): upgraded existing user-owned plugin; original v0.7.1 skill retained and v0.8 enhancement added.
-- [Technical Insight Presentation v0.1.1 — open ChatGPT plugin](https://chatgpt.com/plugins/plugins_6ac8e41bf6ac8191a5b33fd81a37246c): new user-owned private plugin for editable evidence-backed PPT/report workflow.
+- [Technical Insight Presentation v0.2.1 — open ChatGPT plugin](https://chatgpt.com/plugins/plugins_6ac8e41bf6ac8191a5b33fd81a37246c): upgraded private plugin with **native-editable PptxGenJS page components, configurable palette, domain-content JSON (compiler/thermal), real PPTX/PNG visual samples and QA scripts**. See [visual production release notes](presentation/technical-insight-presentation/VISUAL_PRODUCTION_V0_2_1_RELEASE.md) and [gallery](presentation/technical-insight-presentation/visual-gallery/).
 
-**Published/owned does not by itself confirm the plugin was loaded in an existing conversation.** The current chat's skill list may need a new conversation or plugin selection refresh. Cross-domain validation of the presentation skill remains pending.
+**Published/owned does not by itself confirm the plugin was loaded in an existing conversation.** The current chat's skill list may need a new conversation or plugin selection refresh. The v0.2.1 generator has passed **compiler and thermal layout smoke tests**; domain-specific scientific/visual acceptance by a user is still pending.
 
 # skills-lab
 
@@ -52,6 +52,6 @@ See `SKILL_SPEC.md` for the canonical Skill contract.
 ## New skill candidates (2026-10-09)
 
 - [Academic Insight v0.7.1 case review](research/academic-insight/REVIEW_2026-10-09.md) and [proposed v0.8.x incremental improvements](research/academic-insight/PROPOSED_V0_8_ADDENDUM.md). **Historical proposal note:** Academic Insight has since been updated to v0.8.0; see [plugin release ledger](PLUGIN_RELEASES_2026-10-09.md).
-- [Technical Insight Presentation v0.1.0](presentation/technical-insight-presentation/SKILL.md), with evidence handoff, page design, source-backed speaker notes, user-review change control and release QA templates. Now also released as a private ChatGPT plugin v0.1.1; cross-domain validation remains pending.
+- [Technical Insight Presentation v0.2.1](presentation/technical-insight-presentation/SKILL.md), with evidence handoff, page design, source-backed speaker notes, user-review change control and release QA templates. Now also released as a private ChatGPT plugin v0.1.1; cross-domain validation remains pending.
 
 The two Skills exchange an **evidence-backed decision package**, not a raw list of links. GitHub migrations and repository restructuring are explicitly out of scope for Academic Insight.
