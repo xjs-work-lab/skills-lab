@@ -35,3 +35,8 @@
 | INTEGRATION | use accepted source page versions, consistent header/footer | don't regress to rejected pilots or rasterize entire slide |
 
 Review results: automated success = structural pass, not aesthetic acceptance; LibreOffice export ≠ Windows PowerPoint test; skill installation ≠ running the complete toolchain. If runtime lacks PptxGenJS or renderers, state the missing dependency and choose a feasible tool — do not quietly produce low-quality slide images while claiming the same process.
+
+## 2026-10-09 cross-domain smoke tests
+- `--content-json templates/content-thermal.example.json --palette forest` and `--content-json templates/content-compiler.example.json --palette plum` each produce 6-slide 16:9 native-editable decks with Notes; LibreOffice/PDF/PNG export works, no shapes exceed slide bounds.
+- These are **synthetic layout exercises**. They demonstrate configurable page copy plus color, not a completed thermal/LLVM research report; bars are MOCK, scientific sources have not been replaced.
+- A full new-topic deployment still requires direct-paper evidence, original figure/measurement fidelity, per-page detailed content contract and user review.
