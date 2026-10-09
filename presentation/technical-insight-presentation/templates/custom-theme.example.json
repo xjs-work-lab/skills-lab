@@ -1,0 +1,15 @@
+{
+  "name": "custom",
+  "canvas": "F7F7F5",
+  "header": "EEEFF0",
+  "surface": "FFFFFF",
+  "panelTint": "F2F4F5",
+  "ink": "1B2934",
+  "muted": "435463",
+  "accent": "006A66",
+  "accentSoft": "D8EEEB",
+  "border": "CDD8DB",
+  "positive": "006A66",
+  "caution": "A45C12",
+  "font": "Microsoft YaHei"
+}
