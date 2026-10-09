@@ -1,0 +1,21 @@
+{
+  "interface": {
+    "displayName": "Academic Insight",
+    "shortDescription": "Evidence to bounded strategic insight",
+    "longDescription": "Evidence-driven academic/technical insight with authority-guided discovery, Five-Look-Three-Set, original paper/patent 10Q, claims-level proof scope, strongest competing baselines, zero-novelty decision closure and public-evidence constraints. Includes the preserved core method and a v0.8 enhanced skill.",
+    "developerName": "User",
+    "category": "Research",
+    "capabilities": [
+      "Research"
+    ],
+    "defaultPrompt": "Use Academic Insight v0.8 enhanced workflow: read the preserved academic-insight core and academic-insight-v08 for public-only mode, per-claim scope, strong alternatives, zero-quota portfolio, conditional hardware gates and bounded closure. Do not perform experiments unless explicitly authorized."
+  },
+  "name": "academic-insight",
+  "version": "0.8.0",
+  "description": "Evidence-driven academic/technical insight with authority-guided discovery, Five-Look-Three-Set, original paper/patent 10Q, claims-level proof scope, strongest competing baselines, zero-novelty decision closure and public-evidence constraints. Includes the preserved core method and a v0.8 enhanced skill.",
+  "author": {
+    "name": "User"
+  },
+  "keywords": [],
+  "skills": "./skills"
+}
