@@ -1,0 +1,64 @@
+{
+  "pptx": "/home/runner/work/skills-lab/skills-lab/presentation/technical-insight-presentation/visual-gallery/demo-plum-editable.pptx",
+  "notes_pages": 6,
+  "slide_parts": 6,
+  "overflow_shapes": [],
+  "pages": [
+    {
+      "page": 1,
+      "editable_text_shapes": 8,
+      "all_shapes": 38,
+      "speaker_notes": true
+    },
+    {
+      "page": 2,
+      "editable_text_shapes": 28,
+      "all_shapes": 61,
+      "speaker_notes": true
+    },
+    {
+      "page": 3,
+      "editable_text_shapes": 28,
+      "all_shapes": 71,
+      "speaker_notes": true
+    },
+    {
+      "page": 4,
+      "editable_text_shapes": 18,
+      "all_shapes": 50,
+      "speaker_notes": true
+    },
+    {
+      "page": 5,
+      "editable_text_shapes": 22,
+      "all_shapes": 64,
+      "speaker_notes": true
+    },
+    {
+      "page": 6,
+      "editable_text_shapes": 19,
+      "all_shapes": 46,
+      "speaker_notes": true
+    }
+  ],
+  "has_editable_text": true,
+  "has_native_shapes": true,
+  "manual_checks_required": [
+    "visual balance",
+    "text clipping in render",
+    "source/figure correctness",
+    "arrow meaning",
+    "PowerPoint font/link/room projection"
+  ],
+  "page_count": 6,
+  "rendered_pngs": [
+    "/tmp/tip-plum/slide-1.png",
+    "/tmp/tip-plum/slide-2.png",
+    "/tmp/tip-plum/slide-3.png",
+    "/tmp/tip-plum/slide-4.png",
+    "/tmp/tip-plum/slide-5.png",
+    "/tmp/tip-plum/slide-6.png"
+  ],
+  "pdf": "/tmp/tip-plum/demo-plum-editable.pdf",
+  "contact_sheet": "/tmp/tip-plum/contact-sheet.png"
+}
