@@ -1,0 +1,21 @@
+{
+  "interface": {
+    "displayName": "Technical Insight Presentation",
+    "shortDescription": "Research insight to editable, auditable PPT",
+    "longDescription": "Turn evidence-backed academic and industry research into technically accurate leadership presentations with full slide storyboards, source-faithful charts, editable PowerPoint diagrams, explanation-first per-source speaker notes, zero-drift revisions, and rigorous PPTX/PDF/PNG QA.",
+    "developerName": "User",
+    "category": "Research",
+    "capabilities": [
+      "Research"
+    ],
+    "defaultPrompt": "Turn this evidence-backed research into a technical leadership PPT. First verify claim-to-source handoff and full page-by-page content/story contracts. Then produce native editable slides with cited data charts, explain-slide-first Notes plus source-by-source proof, and strict Minimal Change & Content Fidelity checks. Deliver PPTX/PDF/full preview and QA."
+  },
+  "name": "technical-insight-presentation",
+  "version": "0.1.1",
+  "description": "Turn evidence-backed academic and industry research into technically accurate leadership presentations with full slide storyboards, source-faithful charts, editable PowerPoint diagrams, explanation-first per-source speaker notes, zero-drift revisions, and rigorous PPTX/PDF/PNG QA.",
+  "author": {
+    "name": "User"
+  },
+  "keywords": [],
+  "skills": "./skills"
+}
