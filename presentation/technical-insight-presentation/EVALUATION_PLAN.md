@@ -1,3 +1,21 @@
+# Technical Insight Presentation v0.2.1 — 验证状态更新（2026-10-09）
+
+> 本文件下方是 v0.1.0 的原始验证计划，仍作为历史测试需求保留。**现行版本请先阅读** [v0.2.1 完整视觉生产交付报告](VISUAL_PRODUCTION_V0_2_1_RELEASE.md)、[四套实际生成的可编辑PPTX/PNG图库](visual-gallery/)、[SKILL.md](SKILL.md)。
+
+## 已实测通过的“生产工具链”层
+
+- 共四套、每套6页的PptxGenJS原生PPT（中性forest、中性plum、编译器plum、热管理forest）；PDF/逐页PNG导出成功。
+- 6个实际可编辑页面角色，123个非空PPT原生文字对象（每套），6/6页带备注，原生对象结构与页界检查通过。
+- 主题颜色和领域内容均为独立JSON输入；编译器和散热的机制步骤、层级职责、路线与结论内容不依赖固定CPU-uArch字符串。
+- [自动CI](../../.github/workflows/build-technical-insight-visual-gallery.yml)可从GitHub源码再生成四套PPTX和总览图，当前最新完成运行 [#37979489278](https://github.com/xjs-work-lab/skills-lab/actions/runs/37979489278) 为 SUCCESS。
+- 本轮插件正式为 **0.2.1**；原v0.1.1已非当前版本。
+
+## 仍未通过的“真实跨领域洞察汇报”层
+
+模拟数值仍为 `MOCK`。尚未用具体编译器/热学研究真实论据替换，也未获得用户针对新领域完整报告的视觉质量与论据验收。**不能将图形/脚本Smoke Test误称第三方领域正式应用成功。** 下一轮只需选取另一项目 2–3 张真实证据/机制/结论页完成Pilot审阅、调整页面组件，并把通过的样板反向沉淀入同一Skill；没有必要再次重学构图和色彩体系。
+
+---
+
 # Technical Insight Presentation v0.1.0 — evaluation plan (not completed)
 
 **Candidate status:** built from one substantive Agentic CPU/uArch research + leadership PPT cycle. A second independent use case is required before declaring this Skill generally validated.
