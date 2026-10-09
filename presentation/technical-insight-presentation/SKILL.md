@@ -1,10 +1,10 @@
 ---
 name: technical-insight-presentation
 description: Turn evidence-backed academic/industry technology insight or roadmap research into a leadership-readable, technically auditable, editable presentation. Use for PPT/PPTX slide decks, technical decision briefings, evidence-led roadmaps, academic-style executive reports, source-backed speaker notes, and iterative slide review. Enforces research-to-story evidence fidelity, page-by-page design contracts, native editable slide construction, quantitative-data provenance, visual consistency, and zero-content-drift edits.
-version: 0.1.0
+version: 0.1.1
 ---
 
-# Technical Insight Presentation — v0.1.0 (candidate)
+# Technical Insight Presentation — v0.1.1 (candidate)
 
 ## Name / purpose
 **Technical Insight Presentation** turns an existing, sufficiently reviewed research conclusion and evidence package into a **technically defensible, understandable and usable leadership presentation**. It is an execution skill for decision communication, **not a second academic research engine** and not a one-click “make slides look pretty” prompt.
@@ -121,7 +121,7 @@ Sequence:
 3. Produce the deck; render EVERY slide using a real slide renderer; inspect thumbnails **and full-resolution** for typography, source links, chart axes and arrows.
 4. Review source data against originals, software/hardware hierarchy, measurement scope, and presenter-note-source mapping.
 5. Run OOXML/slide inspection of page count, notes, source links, text, page-number convention and editable objects; test PPTX→PDF/PNG consistency.
-6. For micro-edits, run **change-specific zero-drift QA**:
+6. Apply **Minimal Change & Content Fidelity（最小变更与内容保真）**: state the intended edit, allowed fields and protected content. Then run change-specific checks:
    - layout/color/margins/arrows only → visible text, notes, data and links MUST be identical;
    - notes-only → slide XML, graphics, links, relationships must be identical; only notes XML may change;
    - explicit content edit → only approved text/claim IDs may change, update notes/evidence map accordingly.
@@ -155,4 +155,5 @@ Academic Insight (recommended evidence source), original papers/official documen
 Use public-safe examples and data unless the user explicitly supplies and authorizes other material. Do not disclose internal research labels, confidential organizational owners, unreleased vendor roadmaps, paid images or unlicensed figure assets. Links and figure permissions must be verified for intended distribution. No made-up performance or experimental runs.
 
 ## Version notes
+- **v0.1.1 / 2026-10-09** — explicit Minimal Change & Content Fidelity rule; arrow-only/notes-only are examples, not a rule that text can never change.
 - **v0.1.0 / 2026-10-09** — generalized from iterative engineering/academic leadership deck construction; not yet validated in a second independent domain. Evaluate on a software/compiler or thermal-management report before promoting this candidate to a stable release.
