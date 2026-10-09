@@ -1,3 +1,12 @@
+## ChatGPT private plugins (2026-10-09)
+
+Both reusable Skills are archived here **and actually released as private ChatGPT plugins**. See the [release ledger, exact published-source snapshots, and activation/verification instructions](PLUGIN_RELEASES_2026-10-09.md).
+
+- [Academic Insight v0.8.0 — open ChatGPT plugin](https://chatgpt.com/plugins/plugins_6abe1edc35d88191863eee29d3ae6b0f): upgraded existing user-owned plugin; original v0.7.1 skill retained and v0.8 enhancement added.
+- [Technical Insight Presentation v0.1.1 — open ChatGPT plugin](https://chatgpt.com/plugins/plugins_6ac8e41bf6ac8191a5b33fd81a37246c): new user-owned private plugin for editable evidence-backed PPT/report workflow.
+
+**Published/owned does not by itself confirm the plugin was loaded in an existing conversation.** The current chat's skill list may need a new conversation or plugin selection refresh. Cross-domain validation of the presentation skill remains pending.
+
 # skills-lab
 
 Public library of reusable, runtime-independent skills for research, analysis, engineering, knowledge work, learning, and system operations.
