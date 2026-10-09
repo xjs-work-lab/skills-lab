@@ -1,0 +1,51 @@
+name: Build Technical Insight Visual Gallery
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'presentation/technical-insight-presentation/scripts/**'
+      - 'presentation/technical-insight-presentation/templates/**'
+      - '.github/workflows/build-technical-insight-visual-gallery.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install tested production dependencies
+        run: |
+          npm install --no-save pptxgenjs
+          python -m pip install python-pptx pillow
+          command -v libreoffice || (sudo apt-get update && sudo apt-get install -y libreoffice)
+          command -v pdftoppm || (sudo apt-get update && sudo apt-get install -y poppler-utils)
+      - name: Generate native-editable sample decks and full-resolution previews
+        run: |
+          set -eu
+          BASE=presentation/technical-insight-presentation
+          mkdir -p "$BASE/visual-gallery"
+          for STYLE in forest plum; do
+            node "$BASE/scripts/make_template_deck.js" --palette "$STYLE" --out "$BASE/visual-gallery/demo-$STYLE-editable.pptx"
+            python "$BASE/scripts/render_and_qa.py" "$BASE/visual-gallery/demo-$STYLE-editable.pptx" --outdir "/tmp/tip-$STYLE" --dpi 120
+            cp "/tmp/tip-$STYLE/contact-sheet.png" "$BASE/visual-gallery/demo-$STYLE-contact-sheet.png"
+            cp "/tmp/tip-$STYLE/QA.json" "$BASE/visual-gallery/demo-$STYLE-QA.json"
+          done
+      - name: Commit generated visual gallery as reproducible tracked assets
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add presentation/technical-insight-presentation/visual-gallery/
+          if git diff --staged --quiet; then echo "Gallery already current"; else
+            git commit -m "build: refresh native-editable multi-palette visual gallery"
+            git push origin HEAD:main
+          fi
