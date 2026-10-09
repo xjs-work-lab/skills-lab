@@ -88,3 +88,7 @@ Add fields: `Evidence execution mode`, `Proof-scope exclusion`, `Metric layer`, 
 - **Vendor documentary case**: distinguish source API capability from measured OEM deployment/end-to-end outcome.
 - **Portfolio quota case**: user asks for 3 novel bets but evidence justifies 0 or 1; output honest counts and explicit unfilled slots.
 - **Handoff case**: a report or PPT cannot upgrade an `INFERENCE` to a `FACT` merely because a persuasive diagram was drawn.
+
+## Release status update — 2026-10-09
+
+The above text remains the original design proposal. **Academic Insight v0.8.0 is now released** as an updated private ChatGPT plugin. The existing v0.7.1 core skill is retained and a compatible `academic-insight-v08` skill and decision-gate reference are added. The [canonical integrated v0.8 SKILL.md](SKILL.md) preserves the earlier workflow, and the exact [released plugin overlay snapshot](releases/chatgpt-v0.8.0/) is archived. See [release ledger](../../PLUGIN_RELEASES_2026-10-09.md). Actual invocation in a refreshed ChatGPT conversation remains to be confirmed.
