@@ -29,23 +29,29 @@ jobs:
           python -m pip install python-pptx pillow
           command -v libreoffice || (sudo apt-get update && sudo apt-get install -y libreoffice)
           command -v pdftoppm || (sudo apt-get update && sudo apt-get install -y poppler-utils)
-      - name: Generate native-editable sample decks and full-resolution previews
+      - name: Generate 4 editable cross-palette/domain demos and full-res rendered QA
         run: |
           set -eu
           BASE=presentation/technical-insight-presentation
-          mkdir -p "$BASE/visual-gallery"
-          for STYLE in forest plum; do
-            node "$BASE/scripts/make_template_deck.js" --palette "$STYLE" --out "$BASE/visual-gallery/demo-$STYLE-editable.pptx"
-            python "$BASE/scripts/render_and_qa.py" "$BASE/visual-gallery/demo-$STYLE-editable.pptx" --outdir "/tmp/tip-$STYLE" --dpi 120
-            cp "/tmp/tip-$STYLE/contact-sheet.png" "$BASE/visual-gallery/demo-$STYLE-contact-sheet.png"
-            cp "/tmp/tip-$STYLE/QA.json" "$BASE/visual-gallery/demo-$STYLE-QA.json"
+          OUT="$BASE/visual-gallery"
+          mkdir -p "$OUT"
+          node "$BASE/scripts/make_template_deck.js" --palette forest --out "$OUT/demo-forest-editable.pptx"
+          node "$BASE/scripts/make_template_deck.js" --palette plum --out "$OUT/demo-plum-editable.pptx"
+          node "$BASE/scripts/make_template_deck.js" --palette forest --content-json "$BASE/templates/content-thermal.example.json" --out "$OUT/demo-thermal-forest-editable.pptx"
+          node "$BASE/scripts/make_template_deck.js" --palette plum --content-json "$BASE/templates/content-compiler.example.json" --out "$OUT/demo-compiler-plum-editable.pptx"
+          for NAME in forest plum thermal-forest compiler-plum; do
+            python "$BASE/scripts/render_and_qa.py" "$OUT/demo-$NAME-editable.pptx" --outdir "/tmp/tip-$NAME" --dpi 120
+            cp "/tmp/tip-$NAME/contact-sheet.png" "$OUT/demo-$NAME-contact-sheet.png"
+            cp "/tmp/tip-$NAME/QA.json" "$OUT/demo-$NAME-QA.json"
           done
-      - name: Commit generated visual gallery as reproducible tracked assets
+      - name: Commit reproducible visual-gallery PPTX and screenshots
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add presentation/technical-insight-presentation/visual-gallery/
-          if git diff --staged --quiet; then echo "Gallery already current"; else
-            git commit -m "build: refresh native-editable multi-palette visual gallery"
+          if git diff --staged --quiet; then
+            echo "Gallery already current"
+          else
+            git commit -m "build: track 4 editable cross-domain and multi-palette slide galleries"
             git push origin HEAD:main
           fi
