@@ -1,10 +1,10 @@
 ---
 name: technical-insight-presentation
 description: Use when turning finished academic/industrial insight research into high-quality, editable technical leadership decks. Carries an executable design system, 6 slide recipes, palette tokens, evidence-correct charts, native connector code, render-and-review loops, source-first accuracy and explanation-first Notes; for adapting to new subjects without re-teaching visual taste.
-version: 0.2.0
+version: 0.2.1
 ---
 
-# Technical Insight Presentation v0.2.0 — Design + Production System
+# Technical Insight Presentation v0.2.1 — Design + Production System
 
 ## What this skill guarantees as a workflow
 Build **evidence-faithful, visually designed, technical-leadership-readable, editable PowerPoint**, not generic boxes with text. The result requires both (A) scientific/narrative quality and (B) strong visual craft. **Color is configurable; composition rigor is not.** This bundle includes native-editable slide recipes, a working PptxGenJS generator, reproducible sample renders, and QA scripts, not only verbal rules.
@@ -18,7 +18,7 @@ When using this skill, read these bundled files **before laying out pages**:
 5. `references/speaker-notes.md` — teaching-first and independent source records.
 6. `scripts/README.md` — executable demo, environment and portability.
 
-**Use `scripts/make_template_deck.js` as an actual layout/styling reference**, not merely a source of inspiration. It renders a six-slide 16:9 PPTX from native PowerPoint objects, with externally configurable themes. `scripts/render_and_qa.py` renders all slides and detects basic clipping and low-editability traps. Outputs and full-resolution sample images live in `assets/`.
+**Use `scripts/make_template_deck.js` as an actual layout/styling reference**, not merely a source of inspiration. It renders a six-slide 16:9 PPTX from native PowerPoint objects, with externally configurable themes. `scripts/render_and_qa.py` renders all slides and detects basic clipping and low-editability traps. **Use `--content-json templates/content-compiler.example.json` or `content-thermal.example.json` to replace content independently of color; do not reuse CPU-specific module text in a thermal/compiler slide.** Outputs and full-resolution sample images live in `assets/`.
 
 ## Gate 0 — Recover goals and evidence before design
 Clarify technical audience, decision/outcome, time horizon, page budget, language, display format (screen/room), copyright/distribution, editability, approved content, device/workload constraints, unavailable evidence, and **whether the user provided a visual reference**. If a reference deck or PNG exists, **study its actual compositions and assets**; do not blindly reproduce its words in a different project. Data must be traceable to original documents, including exact Table/Figure, sample/device/backend, units, baseline and measurement layer.
@@ -71,4 +71,4 @@ The **same palette does NOT mean every page has the same composition**. Layouts 
 - No claim that source files exist, plugins ran, PPT is installed or reports passed Office QA unless verified.
 
 ## Outputs and version
-Design source (`.js`, themes, assets) + evidence ledger + per-page contract + editable PPTX + same-source PDF/PNG previews + real Notes + link/geometry/science QA and accepted-version map. **v0.2.0 candidate**: now ships a portable executable visual prototype but still requires cross-domain human approval; avoid declaring the generic result stable solely because pilot files render.
+Design source (`.js`, themes, assets) + evidence ledger + per-page contract + editable PPTX + same-source PDF/PNG previews + real Notes + link/geometry/science QA and accepted-version map. **v0.2.1 candidate**: ships a portable executable visual prototype plus domain-specific JSON content contracts (compiler and thermal samples), but still requires human review of actual research visuals; avoid declaring the generic result stable solely because pilot files render.
