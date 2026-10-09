@@ -8,4 +8,4 @@ Scope boundary: this area owns **presentation/storytelling, scientific visual co
 
 
 ## Validation
-- [Cross-domain evaluation plan](technical-insight-presentation/EVALUATION_PLAN.md). The method is a **candidate**, not yet an installed or cross-domain-validated plugin.
+- [Cross-domain evaluation plan](technical-insight-presentation/EVALUATION_PLAN.md). The method is a **cross-domain-validation candidate** and has been **created as a private ChatGPT plugin v0.1.1**; this does not make it a validated stable release.
